@@ -1,0 +1,5 @@
+<launch>
+  <node name="xm_ik_server" pkg="xm_arm_server" type="xm_arm_ik_solver" output="screen"/>
+  <node name="xm_pick_place" pkg="xm_arm_server" type="xm_pick_or_place" output="screen" />
+ <node pkg="tf" type="static_transform_publisher" name="xm_arm_base_broadcaster" args="0.03 0.0 0.69 0 0 0 base_link arm_base 100"/>    
+</launch>
